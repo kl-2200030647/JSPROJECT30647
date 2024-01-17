@@ -1,0 +1,31 @@
+<html>
+    <head>
+     <title> DEMO 30</title>   
+     <script>
+       //map method --change value with an method map 
+       const arr1=[23,45,62,34,56,78,90]
+       document.writeln("Array arr1="+arr1+"</br>")
+       const output1=arr1.map((number)=>number*20 )  // change values by operation 
+
+       document.writeln("Array Output1 ="+output1+"</br>")
+
+       //filter method
+       const arr2=[10,20,21,32,56,91,100]
+       document.writeln("Array arr2="+arr2+"</br>")
+
+       const output2=arr2.filter(  (element)=>element%2==0 )
+       document.writeln("Array Output2="+output2+"</br>")
+
+       // reduce method     -- accumilate elements   --addition,subtraction,mul,fact
+       const arr3=[10,20,30,40,50]
+       document.writeln("Array arr3="+arr3+"</br>")
+
+       const display=(sum,element) => sum=sum+element
+       const output =arr3.reduce(display,0) // we have to pass initial value 
+
+       document.writeln("Output="+output)
+       
+     </script>
+    </head>
+    <body></body>
+</html>

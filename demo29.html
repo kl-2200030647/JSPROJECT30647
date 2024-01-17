@@ -1,0 +1,39 @@
+<html>
+    <head>
+     <title> DEMO 29</title>   
+     <script>
+        //map object -for each method 
+        //difference b/w map and object is ,in map key can be any type and normal obkect can have key as string 
+        const mapobj1=new Map()
+        mapobj1.set(1,101)
+        mapobj1.set("id",1234)
+        mapobj1.set("name","klu")
+
+        document.writeln("Map object 1 size:"+mapobj1.size+"</br>")
+
+        document.writeln("<u> Map object 1 values </u></br>")
+        mapobj1.forEach((v) =>document.writeln(v) )
+         // 2 elements in for each---1st value 2nd key 
+         document.writeln("</br>")
+        document.writeln("<u> Map object 1 keys & values </u></br>")
+        mapobj1.forEach((v,k)=>{
+            document.writeln(k+":"+v)
+        })
+
+        document.writeln("</br>")
+        const mapobj2=new Map([ ["id",101],["name","klu"] ])   // constructor
+        document.writeln("Map object 2 size:"+mapobj2.size+"</br>")
+
+        document.writeln("<u> Map object 2 values </u></br>")
+        mapobj2.forEach((v) =>document.writeln(v) )  // to fetch data we should use key to easy access 
+        document.writeln("</br>")
+        document.writeln("<u> Map object 1 keys & values </u></br>")
+        const display=(v,k)=>{   // call back 
+            document.writeln(k+":"+v)
+        }
+        mapobj2.forEach(display)  // display is callback as it is a method name which is default
+
+     </script>
+    </head>
+    <body></body>
+</html>
